@@ -10,6 +10,7 @@
 
 export default {
 	async fetch(request, env, ctx) {
-		return new Response('Hello World!');
+		console.log(request);
+		return new Response(JSON.stringify(request.cf));
 	},
 };
